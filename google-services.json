@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "320803497860",
+    "firebase_url": "https://bandyer-android-sdk-push-test.firebaseio.com",
+    "project_id": "bandyer-android-sdk-push-test",
+    "storage_bucket": "bandyer-android-sdk-push-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320803497860:android:d385914a5136e5ca",
+        "android_client_info": {
+          "package_name": "com.bandyer.cordova.sampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyEQWt_cm-x470jEFSfI--umD2IVrglGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320803497860:android:61959850f28bd834",
+        "android_client_info": {
+          "package_name": "com.bandyer.demo_android_chat_sdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyEQWt_cm-x470jEFSfI--umD2IVrglGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320803497860:android:cdb73d78b4c5cf31",
+        "android_client_info": {
+          "package_name": "com.bandyer.demo_android_sdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyEQWt_cm-x470jEFSfI--umD2IVrglGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320803497860-5d4k84l5g6jvfi0sutko7g7lg61v27ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

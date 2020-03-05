@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.bandyer.cordova.sampleapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <name>BandyerCordovaSampleApp</name>
+    <description>
+        A sample Apache Cordova application that showcases Bandyer Mobile SDK library capabilities
+    </description>
+    <author email="support@bandyer.com" href="https://www.bandyer.com/">
+        Bandyer S.r.l.
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="19" />
+        <preference name="android-targetSdkVersion" value="29" />
+        <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application">
+            <service
+                android:name="com.bandyer.cordova.plugin.notifications.BandyerNotificationService"
+                android:enabled="true" android:exported="false"
+                android:permission="android.permission.BIND_JOB_SERVICE">
+                <intent-filter>
+                    <action android:name="com.bandyer.NotificationEvent" />
+
+                    <!--////////OneSignal CUSTOM DATA PATH  /////////-->
+                    <!-- <data android:path="custom.a" /> -->
+
+                    <!--////////Pushraven CUSTOM DATA PATH/////////-->
+                    <!--<data android:path="definedServerSide" />-->
+
+                    <!--////////node-pushnotifications CUSTOM DATA PATH/////////-->
+                    <data android:path="message" />
+                </intent-filter>
+            </service>
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="deployment-target" value="10.0" />
+        <preference name="BackupWebStorage" value="none" />
+        <edit-config file="*-Info.plist" mode="merge" target="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+                <string>remote-notification</string>
+                <string>voip</string>
+            </array>
+        </edit-config>
+        <resource-file src="www/assets/sample.mp4" target="sample.mp4" />
+    </platform>
+</widget>
