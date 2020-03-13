@@ -18,9 +18,9 @@
   "author": "Bandyer S.r.l.",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@bandyer/cordova-plugin-bandyer": "^0.2.3",
+    "@bandyer/cordova-plugin-bandyer": "^0.3.0",
     "cordova-android": "^8.1.0",
-    "cordova-ios": "^5.1.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-advanced-http": "^2.2.0",
     "cordova-plugin-androidx": "^1.0.2",
     "cordova-plugin-androidx-adapter": "^1.1.0",
@@ -49,12 +49,11 @@
       "phonegap-plugin-push": {
         "ANDROID_SUPPORT_V13_VERSION": "27.+",
         "FCM_VERSION": "17.0.+"
-      },
-      "cordova-plugin-bandyer": {}
+      }
     },
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
