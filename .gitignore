@@ -11,6 +11,8 @@ bin/*
 plugins/*
 platforms/*
 
+## Ignore configuration
+www/js/config.js
 ### Cordova ###
 # gitignore template for the Cordova framework
 # website: https://cordova.apache.org/
