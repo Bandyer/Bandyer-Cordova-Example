@@ -18,7 +18,7 @@
   "author": "Bandyer S.r.l.",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@bandyer/cordova-plugin-bandyer": "^0.3.1",
+    "@bandyer/cordova-plugin-bandyer": "^0.4.0",
     "cordova-android": "^8.1.0",
     "cordova-ios": "^5.1.1",
     "cordova-plugin-advanced-http": "^2.4.1",
@@ -49,7 +49,8 @@
       },
       "cordova-plugin-advanced-http": {
         "OKHTTP_VERSION": "3.12.10"
-      }
+      },
+      "cordova-plugin-bandyer": {}
     },
     "platforms": [
       "ios",
