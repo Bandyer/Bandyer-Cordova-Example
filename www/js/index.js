@@ -185,7 +185,8 @@ var app = {
 
         // configure push notifications
         var push = PushNotification.init({
-            android: {senderID: sdkConfig.firebaseProjectNumber}
+            android: {senderID: sdkConfig.firebaseProjectNumber},
+            ios: {alert: true}
         });
 
         push.on('registration', function (data) {
@@ -199,35 +200,29 @@ var app = {
             console.error(e.message);
         });
 
-        // IMPORTANT: Due to platform limits in Android no js method will ever be called when the app is closed or in background!
-        // To handle notifications while in background and/or with app closed you may:
-        // 1) use phonegap-plugin-push and set server side when the notification is created {"force-start": "1"} (This will open the app and put it right away in background and then handle the notifications)
-        // 2) Handle yourself the notifications natively, it will allow you to define a different behaviour based on your own logic
-        // 3) Define the lines as described in our documentation in your config.xml and the bandyer-plugin will handle them for you natively (No handling notification callback via js will ever be called, `BandyerPlugin.handlePushNotificationPayload` included)
-        // Link to documentation:
-
-        // In this sample app:
-        // For Android the option number 3 will be used
-        // For iOS The following code will be used
+        // NOTIFICATIONS
+        //
+        // --- ANDROID ---
+        // Chat&Calls
+        // The sample app handles the both kind of notifications by setting the BandyerNotificationService in the config.xml
+        // If this type of handling does not fit your requirements check the documentation for alternative ways.
+        //
+        // --- IOS ---
+        // Calls:
+        // - Define the target="UIBackgroundModes" in your config.xml as shown in this sample app
+        // - Set voipNotificationKeyPath during the plugin setup and the plugin will handle the notifications by itself.
+        //
+        // Chat:
+        // - Listen for normal alert push notification containing the userAlias as title and the message as body and start a chat with that userAlias
         if (device.platform === "iOS") {
             push.on('notification', function (data) {
-                console.debug(data.message);
-                console.debug(data.title);
-                console.debug(data.count);
-                console.debug(data.sound);
-                console.debug(data.image);
-                console.debug(data.additionalData);
-
-                // get bandyer payload as forwarded from your server.
-                // In our case  the payload is wrapped inside data object of additionalData
-                var bandyerPayload = data.additionalData.data;
-                // forward received bandyer payload to bandyer plugin to be handled
-                BandyerPlugin.handlePushNotificationPayload({
-                    payload: bandyerPayload
-                }, function () {
-                    console.debug("notification handed to bandyer plugin");
-                }, function (err) {
-                    console.error("notification could not be handed to bandyer plugin", err);
+                console.log(data);
+                var otherUser = data.title;
+                bandyerPlugin.startChat({
+                    userAlias: otherUser,
+                    withAudioCallCapability: {recording: false},
+                    withAudioUpgradableCallCapability: {recording: false},
+                    withAudioVideoCallCapability: {recording: false}
                 });
             });
         }
