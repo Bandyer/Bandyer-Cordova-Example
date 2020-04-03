@@ -128,7 +128,11 @@ var app = {
         });
 
         bandyerPlugin.on(BandyerPlugin.events.iOSVoipPushTokenUpdated, function (token) {
-            console.debug("Push Token ", token);
+            console.debug("Voip push Token", token);
+            pushRegistrationId = token;
+            if (userAlias) {
+                registerNotificationDeviceToken();
+            }
         });
 
         var userAlias = storage.getItem("userAlias");
