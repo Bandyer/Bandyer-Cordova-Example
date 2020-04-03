@@ -83,7 +83,11 @@ var app = {
             logEnabled: true,
             // optional you can disable one or more of the following capabilities, by default callkit is enabled
             iosConfig: {
-                callkitEnabled: true,
+                callkit: {
+                    enabled: false,
+                    appIconName: "logo_transparent", // optional but recommended
+                    ringtoneSoundName: "custom_ringtone" // optional
+                },
                 fakeCapturerFileName: 'sample',
                 voipNotificationKeyPath: 'data'
             },
