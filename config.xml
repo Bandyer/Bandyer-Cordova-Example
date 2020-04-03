@@ -56,6 +56,6 @@
         </edit-config>
         <resource-file src="www/assets/sample.mp4" target="sample.mp4" />
         <resource-file src="www/assets/custom_ringtone.mp3" target="custom_ringtone.mp3" />
-        <resource-file src="www/assets/logo_transparent.png" target="logo_transparent.mp4" />
+        <resource-file src="www/assets/logo_transparent.png" target="logo_transparent.png" />
     </platform>
 </widget>
