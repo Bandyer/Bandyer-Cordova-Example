@@ -17,6 +17,8 @@
  * under the License.
  */
 
+var bandyerPlugin;
+
 var app = {
     initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -77,7 +79,7 @@ var app = {
         chatButton.prop('disabled', true);
         logoutButton.prop('disabled', true);
 
-        var bandyerPlugin = BandyerPlugin.setup({
+        bandyerPlugin = BandyerPlugin.setup({
             environment: BandyerPlugin.environments.sandbox(),
             appId: sdkConfig.appIdentifier,
             logEnabled: true,
@@ -135,7 +137,18 @@ var app = {
             }
         });
 
+        var arrayUserDetails = [
+            {userAlias: "usr_", firstName : "Name", lastName:"Surname"},
+        ];
+
+        bandyerPlugin.addUsersDetails(arrayUserDetails);
+
+        bandyerPlugin.setUserDetailsFormat({
+            default: "${firstName} ${lastName}"
+        });
+
         var userAlias = storage.getItem("userAlias");
+
         if (userAlias) {
             userToLoginInputText.val(userAlias);
             bandyerPlugin.startFor(userAlias);
