@@ -51,7 +51,7 @@
       "cordova-plugin-advanced-http": {
         "OKHTTP_VERSION": "3.12.10"
       },
-      "cordova-plugin-bandyer": {}
+      "cordova-plugin-bandyer": {},
       "com.outsystems.mobile.stetho": {}
     },
     "platforms": [
