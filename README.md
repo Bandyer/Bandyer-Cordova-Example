@@ -24,4 +24,9 @@ To fix this problem run the following command <b>before cordova run android</b>
 ```bash
 export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https://services.gradle.org/distributions/gradle-5.3-bin.zip
 ```
+
+- Gradle version too low when using cordova android 9?
+To fix this problem run the following command <b>before cordova run android</b>
+```bash
+export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https://services.gradle.org/distributions/gradle-6.1.1-bin.zip
 ```
