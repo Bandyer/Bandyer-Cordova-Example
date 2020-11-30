@@ -18,8 +18,6 @@
   "author": "Bandyer S.r.l.",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@bandyer/cordova-plugin-bandyer": "^0.6.4",
-    "cordova-android": "^8.1.0",
     "cordova-ios": "^5.1.1",
     "cordova-plugin-advanced-http": "^2.4.1",
     "cordova-plugin-androidx": "^1.0.2",
@@ -35,7 +33,10 @@
     "phonegap-plugin-push": "^2.3.0",
     "recursive-readdir": "^2.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@bandyer/cordova-plugin-bandyer": "^0.6.5",
+    "cordova-android": "^8.1.0"
+  },
   "cordova": {
     "plugins": {
       "cordova-plugin-enable-multidex": {},
@@ -50,8 +51,9 @@
       "cordova-plugin-advanced-http": {
         "OKHTTP_VERSION": "3.12.10"
       },
-      "com.outsystems.mobile.stetho": {},
-      "cordova-plugin-bandyer": {}
+      "cordova-plugin-stetho-android": {},
+      "@bandyer/cordova-plugin-bandyer": {},
+      "com.outsystems.mobile.stetho": {}
     },
     "platforms": [
       "android",

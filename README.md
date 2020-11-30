@@ -13,6 +13,15 @@ N.B. firebaseProjectId is your own Firebase project identifier used for android 
 
 ## How to run the example app
 ```bash
-npm run android
-npm run ios
+cordova run android
+cordova run ios
+```
+
+Problems & Solutions
+
+- Gradle version too low when using cordova android 8?
+To fix this problem run the following command <b>before cordova run android</b>
+```bash
+export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https://services.gradle.org/distributions/gradle-5.3-bin.zip
+```
 ```
