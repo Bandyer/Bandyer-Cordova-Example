@@ -34,7 +34,7 @@
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
-    "@bandyer/cordova-plugin-bandyer": "^0.6.5",
+    "@bandyer/cordova-plugin-bandyer": "^0.6.6",
     "cordova-android": "^9.0.0"
   },
   "cordova": {
@@ -52,8 +52,8 @@
         "OKHTTP_VERSION": "3.12.10"
       },
       "cordova-plugin-stetho-android": {},
-      "@bandyer/cordova-plugin-bandyer": {},
-      "com.outsystems.mobile.stetho": {}
+      "com.outsystems.mobile.stetho": {},
+      "@bandyer/cordova-plugin-bandyer": {}
     },
     "platforms": [
       "android",
